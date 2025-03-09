@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Promasters - Postgraduate Support System</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#0052CC',
+secondary: '#FF6B2C'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+}
+}
+}
+}
+</script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body { font-family: 'Inter', sans-serif; }
+</style>
+</head>
+<body class="bg-white">
+
+<nav class="fixed w-full bg-white/90 backdrop-blur-sm z-50 border-b">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between h-16">
+<div class="flex items-center">
+<a href="https://readdy.ai/home/e0313b02-e324-4884-8169-a25819dc9960/7f94ea32-0512-4e82-b285-8c8ea5c80cce" data-readdy="true" class="text-2xl font-['Pacifico'] text-primary">logo</a>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a href="https://readdy.ai/home/e0313b02-e324-4884-8169-a25819dc9960/7f94ea32-0512-4e82-b285-8c8ea5c80cce" data-readdy="true" class="text-gray-700 hover:text-primary">Home</a>
+<a href="#mission" class="text-gray-700 hover:text-primary">Mission</a>
+<a href="#curriculum" class="text-gray-700 hover:text-primary">Curriculum</a>
+<a href="#mentorship" class="text-gray-700 hover:text-primary">Mentorship</a>
+<a href="#team" class="text-gray-700 hover:text-primary">Team</a>
+<a href="#faq" class="text-gray-700 hover:text-primary">FAQ</a>
+<a href="#contact" class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90 cursor-pointer whitespace-nowrap">Contact Us</a>
+</div>
+<button id="mobileMenuBtn" class="md:hidden w-10 h-10 flex items-center justify-center">
+<i class="ri-menu-line text-2xl text-gray-700"></i>
+</button>
+</div>
+</div>
+</nav>
+
+<div id="mobileMenu" class="hidden fixed inset-0 bg-white z-50">
+<div class="p-4 flex justify-between items-center border-b">
+<a href="https://readdy.ai/home/e0313b02-e324-4884-8169-a25819dc9960/7f94ea32-0512-4e82-b285-8c8ea5c80cce" data-readdy="true" class="text-2xl font-['Pacifico'] text-primary">logo</a>
+<button id="mobileMenuCloseBtn" class="w-10 h-10 flex items-center justify-center">
+<i class="ri-close-line text-2xl text-gray-700"></i>
+</button>
+</div>
+<div class="p-4 flex flex-col space-y-4">
+<a href="https://readdy.ai/home/e0313b02-e324-4884-8169-a25819dc9960/7f94ea32-0512-4e82-b285-8c8ea5c80cce" data-readdy="true" class="text-gray-700 hover:text-primary text-lg">Home</a>
+<a href="#mission" class="text-gray-700 hover:text-primary text-lg">Mission</a>
+<a href="#curriculum" class="text-gray-700 hover:text-primary text-lg">Curriculum</a>
+<a href="#mentorship" class="text-gray-700 hover:text-primary text-lg">Mentorship</a>
+<a href="#team" class="text-gray-700 hover:text-primary text-lg">Team</a>
+<a href="#faq" class="text-gray-700 hover:text-primary text-lg">FAQ</a>
+<a href="#contact" class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90 cursor-pointer whitespace-nowrap text-center">Contact Us</a>
+</div>
+</div>
+
+<section class="relative pt-16 bg-gray-50">
+<div class="absolute inset-0">
+<div class="absolute inset-y-0 left-0 w-1/2 bg-gray-50"></div>
+</div>
+<div class="relative max-w-7xl mx-auto lg:grid lg:grid-cols-5">
+<div class="bg-gray-50 py-16 px-4 sm:px-6 lg:col-span-2 lg:px-8 lg:py-24 xl:pr-12">
+<div class="max-w-lg mx-auto">
+<nav class="flex mb-8" aria-label="Breadcrumb">
+<ol class="inline-flex items-center space-x-1 md:space-x-3">
+<li class="inline-flex items-center">
+<a href="https://readdy.ai/home/e0313b02-e324-4884-8169-a25819dc9960/7f94ea32-0512-4e82-b285-8c8ea5c80cce" data-readdy="true" class="text-gray-500 hover:text-primary">
+<i class="ri-home-line mr-2"></i>
+Home
+</a>
+</li>
+<li>
+<div class="flex items-center">
+<i class="ri-arrow-right-s-line text-gray-400"></i>
+<span class="ml-1 text-gray-500 md:ml-2">About Us</span>
+</div>
+</li>
+</ol>
+</nav>
+<h2 class="text-4xl font-bold text-gray-900 sm:text-5xl">About Promasters</h2>
+<p class="mt-6 text-lg leading-7 text-gray-500">
+Empowering postgraduates with the skills, resources, and connections needed to thrive in today's entrepreneurial landscape.
+</p>
+<div class="mt-8">
+<div class="inline-flex rounded-md shadow">
+<a href="#curriculum" class="bg-primary text-white px-6 py-3 !rounded-button hover:bg-primary/90 text-base font-medium cursor-pointer whitespace-nowrap">
+View Curriculum
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white py-16 px-4 sm:px-6 lg:col-span-3 lg:py-24 lg:px-8 xl:pl-12">
+<div class="max-w-lg mx-auto lg:max-w-none">
+<div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
+<div class="bg-gray-50 p-6 rounded-lg">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+<i class="ri-graduation-cap-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-lg font-medium text-gray-900">500+</h3>
+<p class="mt-2 text-base text-gray-500">Graduates Supported</p>
+</div>
+<div class="bg-gray-50 p-6 rounded-lg">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+<i class="ri-building-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-lg font-medium text-gray-900">200+</h3>
+<p class="mt-2 text-base text-gray-500">Startups Launched</p>
+</div>
+<div class="bg-gray-50 p-6 rounded-lg">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+<i class="ri-team-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-lg font-medium text-gray-900">50+</h3>
+<p class="mt-2 text-base text-gray-500">Expert Mentors</p>
+</div>
+<div class="bg-gray-50 p-6 rounded-lg">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+<i class="ri-funds-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-lg font-medium text-gray-900">$10M+</h3>
+<p class="mt-2 text-base text-gray-500">Funding Secured</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="mission" class="py-24 bg-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="max-w-3xl mx-auto text-center mb-16">
+<h2 class="text-3xl font-bold text-gray-900 sm:text-4xl">Our Mission & Vision</h2>
+<p class="mt-4 text-xl text-gray-500">Building bridges between academic excellence and entrepreneurial success.</p>
+</div>
+<div class="grid grid-cols-1 gap-12 lg:grid-cols-2 items-center">
+<div>
+<img src="https://public.readdy.ai/ai/img_res/6a34136887ae9e93544af48941a971d9.jpg" alt="Mission" class="rounded-lg shadow-lg">
+</div>
+<div class="space-y-6">
+<div class="flex items-start space-x-4">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+<i class="ri-focus-line text-primary text-2xl"></i>
+</div>
+<div>
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Vision</h3>
+<p class="text-gray-600">To be the leading platform transforming postgraduates into successful entrepreneurs, creating a global network of innovative business leaders.</p>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+<i class="ri-flag-line text-primary text-2xl"></i>
+</div>
+<div>
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Mission</h3>
+<p class="text-gray-600">To provide comprehensive support, mentorship, and resources that bridge the gap between academic achievement and entrepreneurial success.</p>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+<i class="ri-heart-line text-primary text-2xl"></i>
+</div>
+<div>
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Values</h3>
+<p class="text-gray-600">Innovation, integrity, collaboration, and commitment to excellence in everything we do.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="curriculum" class="py-24 bg-gray-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="max-w-3xl mx-auto text-center mb-16">
+<h2 class="text-3xl font-bold text-gray-900 sm:text-4xl">Curriculum Overview</h2>
+<p class="mt-4 text-xl text-gray-500">A comprehensive program designed for entrepreneurial success.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white p-8 rounded-lg shadow-sm">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+<i class="ri-book-open-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Foundation Phase</h3>
+<ul class="space-y-3 text-gray-600">
+<li class="flex items-center">
+<i class="ri-checkbox-circle-line text-primary mr-2"></i>
+Business Fundamentals
+</li>
+<li class="flex items-center">
+<i class="ri-checkbox-circle-line text-primary mr-2"></i>
+Market Research
+</li>
+<li class="flex items-center">
+<i class="ri-checkbox-circle-line text-primary mr-2"></i>
+Financial Planning
+</li>
+<li class="flex items-center">
+<i class="ri-checkbox-circle-line text-primary mr-2"></i>
+Legal Essentials
+</li>
+</ul>
+<button onclick="showPhaseDetails('foundation')" class="mt-6 text-primary hover:text-primary/80 flex items-center cursor-pointer whitespace-nowrap">
+Learn More
+<i class="ri-arrow-right-line ml-1"></i>
+</button>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-sm">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+<i class="ri-rocket-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Growth Phase</h3>
+<ul class="space-y-3 text-gray-600">
+<li class="flex items-center">
+<i class="ri-checkbox-circle-line text-primary mr-2"></i>
+Marketing Strategy
+</li>
+<li class="flex items-center">
+<i class="ri-checkbox-circle-line text-primary mr-2"></i>
+Sales Techniques
+</li>
+<li class="flex items-center">
+<i class="ri-checkbox-circle-line text-primary mr-2"></i>
+Team Building
+</li>
+<li class="flex items-center">
+<i class="ri-checkbox-circle-line text-primary mr-2"></i>
+Operations Management
+</li>
+</ul>
+<button onclick="showPhaseDetails('growth')" class="mt-6 text-primary hover:text-primary/80 flex items-center cursor-pointer whitespace-nowrap">
+Learn More
+<i class="ri-arrow-right-line ml-1"></i>
+</button>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-sm">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+<i class="ri-line-chart-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Scale Phase</h3>
+<ul class="space-y-3 text-gray-600">
+<li class="flex items-center">
+<i class="ri-checkbox-circle-line text-primary mr-2"></i>
+Investment Strategy
+</li>
+<li class="flex items-center">
+<i class="ri-checkbox-circle-line text-primary mr-2"></i>
+Global Expansion
+</li>
+<li class="flex items-center">
+<i class="ri-checkbox-circle-line text-primary mr-2"></i>
+Advanced Technology
+</li>
+<li class="flex items-center">
+<i class="ri-checkbox-circle-line text-primary mr-2"></i>
+Strategic Partnerships
+</li>
+</ul>
+<button onclick="showPhaseDetails('scale')" class="mt-6 text-primary hover:text-primary/80 flex items-center cursor-pointer whitespace-nowrap">
+Learn More
+<i class="ri-arrow-right-line ml-1"></i>
+</button>
+</div>
+</div>
+</div>
+</section>
+
+<section id="mentorship" class="py-24 bg-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="max-w-3xl mx-auto text-center mb-16">
+<h2 class="text-3xl font-bold text-gray-900 sm:text-4xl">Expert Mentorship</h2>
+<p class="mt-4 text-xl text-gray-500">Learn from industry leaders who have been there and done that.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+<img src="https://public.readdy.ai/ai/img_res/0edce67360c1f257574ae4a339c4befc.jpg" class="w-32 h-32 rounded-full mx-auto mb-6 object-cover" alt="Mentor">
+<h3 class="text-xl font-semibold text-gray-900 text-center mb-2">Sarah Chen</h3>
+<p class="text-gray-600 text-center mb-4">Former CEO, TechVision Inc.</p>
+<div class="flex justify-center space-x-4">
+<a href="#" class="text-gray-400 hover:text-primary">
+<i class="ri-linkedin-box-fill text-xl"></i>
+</a>
+<a href="#" class="text-gray-400 hover:text-primary">
+<i class="ri-twitter-fill text-xl"></i>
+</a>
+</div>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+<img src="https://public.readdy.ai/ai/img_res/2751f5332253ecd585d8364d34c430dc.jpg" class="w-32 h-32 rounded-full mx-auto mb-6 object-cover" alt="Mentor">
+<h3 class="text-xl font-semibold text-gray-900 text-center mb-2">Marcus Thompson</h3>
+<p class="text-gray-600 text-center mb-4">Founder, Global Ventures</p>
+<div class="flex justify-center space-x-4">
+<a href="#" class="text-gray-400 hover:text-primary">
+<i class="ri-linkedin-box-fill text-xl"></i>
+</a>
+<a href="#" class="text-gray-400 hover:text-primary">
+<i class="ri-twitter-fill text-xl"></i>
+</a>
+</div>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+<img src="https://public.readdy.ai/ai/img_res/e4e3aea34e37b0296d7a49e06e65077b.jpg" class="w-32 h-32 rounded-full mx-auto mb-6 object-cover" alt="Mentor">
+<h3 class="text-xl font-semibold text-gray-900 text-center mb-2">Emma Schmidt</h3>
+<p class="text-gray-600 text-center mb-4">Investment Director, Future Fund</p>
+<div class="flex justify-center space-x-4">
+<a href="#" class="text-gray-400 hover:text-primary">
+<i class="ri-linkedin-box-fill text-xl"></i>
+</a>
+<a href="#" class="text-gray-400 hover:text-primary">
+<i class="ri-twitter-fill text-xl"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="mt-12 text-center">
+<button onclick="showAllMentors()" class="bg-white border-2 border-primary text-primary px-8 py-3 !rounded-button hover:bg-gray-50 text-lg font-medium cursor-pointer whitespace-nowrap">
+View All Mentors
+<i class="ri-arrow-right-line ml-2"></i>
+</button>
+</div>
+</div>
+</section>
+
+<section id="faq" class="py-24 bg-gray-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="max-w-3xl mx-auto text-center mb-16">
+<h2 class="text-3xl font-bold text-gray-900 sm:text-4xl">Frequently Asked Questions</h2>
+<p class="mt-4 text-xl text-gray-500">Got questions? We've got answers.</p>
+</div>
+<div class="max-w-3xl mx-auto">
+<div class="space-y-6">
+<div class="bg-white rounded-lg shadow-sm">
+<button class="w-full px-6 py-4 text-left focus:outline-none flex justify-between items-center" onclick="toggleFAQ(this)">
+<span class="text-lg font-medium text-gray-900">What is the application process?</span>
+<i class="ri-add-line text-2xl text-gray-400 transform transition-transform duration-200"></i>
+</button>
+<div class="hidden px-6 pb-4">
+<p class="text-gray-600">Our application process involves submitting your academic credentials, a business proposal, and completing an interview with our selection committee. Applications are reviewed on a rolling basis.</p>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-sm">
+<button class="w-full px-6 py-4 text-left focus:outline-none flex justify-between items-center" onclick="toggleFAQ(this)">
+<span class="text-lg font-medium text-gray-900">How long is the program?</span>
+<i class="ri-add-line text-2xl text-gray-400 transform transition-transform duration-200"></i>
+</button>
+<div class="hidden px-6 pb-4">
+<p class="text-gray-600">The core program runs for 12 months, with flexible options for extended mentorship and support based on your business needs and progress.</p>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-sm">
+<button class="w-full px-6 py-4 text-left focus:outline-none flex justify-between items-center" onclick="toggleFAQ(this)">
+<span class="text-lg font-medium text-gray-900">What funding opportunities are available?</span>
+<i class="ri-add-line text-2xl text-gray-400 transform transition-transform duration-200"></i>
+</button>
+<div class="hidden px-6 pb-4">
+<p class="text-gray-600">We offer various funding opportunities including seed funding, investor matching, and grant applications. Our team works closely with you to identify and secure the most suitable funding options.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="contact" class="py-24 bg-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="max-w-3xl mx-auto text-center mb-16">
+<h2 class="text-3xl font-bold text-gray-900 sm:text-4xl">Get in Touch</h2>
+<p class="mt-4 text-xl text-gray-500">Have questions? We'd love to hear from you.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+<div>
+<form id="contactForm" class="space-y-6">
+<div>
+<label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+<input type="text" id="name" name="name" class="mt-1 block w-full border-gray-300 rounded-button shadow-sm focus:ring-primary focus:border-primary sm:text-sm" required>
+</div>
+<div>
+<label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+<input type="email" id="email" name="email" class="mt-1 block w-full border-gray-300 rounded-button shadow-sm focus:ring-primary focus:border-primary sm:text-sm" required>
+</div>
+<div>
+<label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+<textarea id="message" name="message" rows="4" class="mt-1 block w-full border-gray-300 rounded-button shadow-sm focus:ring-primary focus:border-primary sm:text-sm" required></textarea>
+</div>
+<button type="submit" class="w-full bg-primary text-white px-6 py-3 !rounded-button hover:bg-primary/90 font-medium cursor-pointer whitespace-nowrap">Send Message</button>
+</form>
+</div>
+<div class="space-y-8">
+<div>
+<h3 class="text-lg font-medium text-gray-900 mb-4">Visit Us</h3>
+<p class="text-gray-600">
+1234 Innovation Drive<br>
+San Francisco, CA 94107<br>
+United States
+</p>
+</div>
+<div>
+<h3 class="text-lg font-medium text-gray-900 mb-4">Contact Info</h3>
+<p class="text-gray-600">
+Email: contact@promasters.com<br>
+Phone: +1 (555) 123-4567
+</p>
+</div>
+<div>
+<h3 class="text-lg font-medium text-gray-900 mb-4">Follow Us</h3>
+<div class="flex space-x-4">
+<a href="#" class="text-gray-400 hover:text-primary">
+<i class="ri-linkedin-box-fill text-2xl"></i>
+</a>
+<a href="#" class="text-gray-400 hover:text-primary">
+<i class="ri-twitter-fill text-2xl"></i>
+</a>
+<a href="#" class="text-gray-400 hover:text-primary">
+<i class="ri-instagram-fill text-2xl"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<footer class="bg-gray-900 text-white py-16">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-4 md:px-0">
+<div>
+<span class="text-2xl font-['Pacifico'] text-white mb-4 block">logo</span>
+<p class="text-gray-400">Empowering graduates to become successful entrepreneurs.</p>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+<ul class="space-y-2">
+<li><a href="#mission" class="text-gray-400 hover:text-white">Mission</a></li>
+<li><a href="#curriculum" class="text-gray-400 hover:text-white">Curriculum</a></li>
+<li><a href="#mentorship" class="text-gray-400 hover:text-white">Mentorship</a></li>
+<li><a href="#faq" class="text-gray-400 hover:text-white">FAQ</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-4">Legal</h3>
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white">Terms of Service</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white">Cookie Policy</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+<p class="text-gray-400 mb-4">Stay updated with our latest news and updates.</p>
+<form class="space-y-2">
+<input type="email" placeholder="Your email address" class="w-full px-4 py-2 rounded-button border-none text-sm bg-gray-800 text-white">
+<button type="submit" class="w-full bg-white text-gray-900 px-4 py-2 !rounded-button hover:bg-gray-100 font-medium cursor-pointer whitespace-nowrap">Subscribe</button>
+</form>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+<p>&copy; 2025 Promasters. All rights reserved.</p>
+</div>
+</div>
+</footer>
+
+<div id="phaseDetailsModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
+<div class="bg-white rounded-lg p-8 max-w-2xl w-full mx-4">
+
+
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-xl font-semibold text-gray-900" id="phaseDetailsTitle"></h3>
+<button onclick="closePhaseDetails()" class="text-gray-400 hover:text-gray-500">
+<i class="ri-close-line text-2xl"></i>
+</button>
+</div>
+<div id="phaseDetailsContent"></div>
+</div>
+</div>
+
+<script>
+document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+document.getElementById('mobileMenu').classList.remove('hidden');
+document.body.style.overflow = 'hidden';
+});
+
+document.getElementById('mobileMenuCloseBtn').addEventListener('click', () => {
+document.getElementById('mobileMenu').classList.add('hidden');
+document.body.style.overflow = '';
+});
+
+function toggleFAQ(element) {
+const content = element.nextElementSibling;
+const icon = element.querySelector('i');
+content.classList.toggle('hidden');
+icon.classList.toggle('rotate-45');
+}
+
+function showPhaseDetails(phase) {
+const modal = document.getElementById('phaseDetailsModal');
+const title = document.getElementById('phaseDetailsTitle');
+const content = document.getElementById('phaseDetailsContent');
+
+const phaseDetails = {
+foundation: {
+title: 'Foundation Phase Details',
+content: `
+<div class="space-y-6">
+<p class="text-gray-600">The Foundation Phase establishes the core knowledge and skills needed for business success.</p>
+<div class="space-y-4">
+<h4 class="font-medium text-gray-900">Key Topics:</h4>
+<ul class="list-disc pl-5 space-y-2 text-gray-600">
+<li>Business Model Development</li>
+<li>Market Analysis & Research</li>
+<li>Financial Planning & Management</li>
+<li>Legal & Regulatory Compliance</li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-medium text-gray-900">Duration:</h4>
+<p class="text-gray-600">3 months with weekly workshops and assignments</p>
+</div>
+</div>
+`
+},
+growth: {
+title: 'Growth Phase Details',
+content: `
+<div class="space-y-6">
+<p class="text-gray-600">The Growth Phase focuses on expanding your business and reaching new markets.</p>
+<div class="space-y-4">
+<h4 class="font-medium text-gray-900">Key Topics:</h4>
+<ul class="list-disc pl-5 space-y-2 text-gray-600">
+<li>Marketing Strategy Development</li>
+<li>Sales Process Optimization</li>
+<li>Team Building & Management</li>
+<li>Operational Excellence</li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-medium text-gray-900">Duration:</h4>
+<p class="text-gray-600">4 months with intensive mentoring sessions</p>
+</div>
+</div>
+`
+},
+scale: {
+title: 'Scale Phase Details',
+content: `
+<div class="space-y-6">
+<p class="text-gray-600">The Scale Phase prepares you for significant business expansion and growth.</p>
+<div class="space-y-4">
+<h4 class="font-medium text-gray-900">Key Topics:</h4>
+<ul class="list-disc pl-5 space-y-2 text-gray-600">
+<li>Investment Strategy & Funding</li>
+<li>International Market Entry</li>
+<li>Technology Integration</li>
+<li>Strategic Partnerships</li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-medium text-gray-900">Duration:</h4>
+<p class="text-gray-600">5 months with specialized expert guidance</p>
+</div>
+</div>
+`
+}
+};
+
+title.textContent = phaseDetails[phase].title;
+content.innerHTML = phaseDetails[phase].content;
+modal.classList.remove('hidden');
+document.body.style.overflow = 'hidden';
+}
+
+function closePhaseDetails() {
+document.getElementById('phaseDetailsModal').classList.add('hidden');
+document.body.style.overflow = '';
+}
+
+document.getElementById('contactForm').addEventListener('submit', async (e) => {
+e.preventDefault();
+const submitBtn = e.target.querySelector('button[type="submit"]');
+const originalText = submitBtn.innerHTML;
+submitBtn.disabled = true;
+submitBtn.innerHTML = `
+<div class="flex items-center justify-center">
+<div class="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
+Sending...
+</div>
+`;
+
+try {
+await new Promise(resolve => setTimeout(resolve, 1500));
+alert('Message sent successfully!');
+e.target.reset();
+} catch (error) {
+alert('An error occurred. Please try again.');
+} finally {
+submitBtn.disabled = false;
+submitBtn.innerHTML = originalText;
+}
+});
+</script>
+
+</body>
+</html>
